@@ -1,13 +1,91 @@
+#score {
+	position: absolute;
+	top: 20px;
+	left: 450px;
+	font-size: 30px;
+	color: white;
+	z-index: 10;
+	font-family: Arial;
+	font-weight: 700;
+}
+
+#hud {
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    display: flex;
+    gap: 8px;
+    z-index: 1000; 
+}
+
+#lives {
+    display: flex;
+    gap: 10px;
+}
+
+.life {
+    width: 32px;
+    height: 32px;
+}
+
+#game-over {
+	position: absolute;
+	top: 350px;
+	left: 100px;
+	font-size: 64px;
+	color: #850000;
+	font-weight: bold;
+	font-family: Georgia;
+	text-shadow: 2px 2px 5px rgb(255, 255, 255);
+	z-index: 1000;
+}
+
+#restart-button {
+	position: absolute;
+	top: 460px;
+	left: 230px;
+	padding: 10px 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	background-color: #850000;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-family: Georgia;
+	z-index: 1000;
+}
+
+.hidden {
+	display: none;
+}
+
 #space {
-  background-image: url("../assets/png/Background/starBackground.png");
-  position: relative;
-  overflow: hidden;
+	background-image: url("../assets/png/Background/starBackground.png");
+	position: relative;
+	overflow: hidden;
 }
 
 #ship {
-  position: absolute;
+	position: absolute;
 }
 
 .enemy-ship {
-  position: absolute;
+	position: absolute;
+}
+
+.enemy-ufo {
+	position: absolute;
+}
+
+.big-meteor {
+	position: absolute;
+}
+
+.small-meteor {
+	position: absolute;
+}
+
+.laser {
+	position: absolute;
 }
