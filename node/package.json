@@ -1,6 +1,7 @@
 {
 	"name": "pw",
 	"version": "1.0.0",
+	"type": "module",
 	"main": "index.js",
 	"scripts": {
 		"start": "NODE_ENV=development nodemon index.js",

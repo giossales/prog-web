@@ -1,7 +1,7 @@
-const http = require('http');
-const fs = require('fs');
-const { createLink } = require('./utils');
-const path = require('path'); 
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
+import { createLink } from './utils.js';
 
 const dir = process.argv[2];
 
