@@ -1,0 +1,13 @@
+{{#if mostrar_mensagem}}
+    <h1>{{mensagem}}</h1>
+{{else}}
+    <h1>Não há mensagem</h1>
+{{/if}}
+
+<ul>
+{{#each profs}}
+    <li>{{nome}} - {{sala}}</li>
+{{/each}}
+</ul>
+
+{{{discList discs}}}

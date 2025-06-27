@@ -1,0 +1,11 @@
+node_modules
+build
+.env
+logs
+!logs/.gitkeep
+
+/src/generated/prisma
+
+/src/generated/prisma
+
+/src/generated/prisma

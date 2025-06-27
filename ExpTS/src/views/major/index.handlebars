@@ -1,0 +1,47 @@
+<div class="d-flex justify-content-between align-items-start">
+  <h2>Listagem de cursos</h2>
+  <h4><a href="/majors/create"><i class="bi bi-plus-square"></i></a></h4>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Nome</th>
+      <th class="text-end">Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each majors}}
+    <tr>
+      <td>{{code}}</td>
+      <td>{{name}}</td>
+      <td class="text-end">
+        <a href="/majors/read/{{id}}"><i class="bi bi-eye"></i></a>
+        <a href="/majors/update/{{id}}"><i class="bi bi-pencil"></i></a>
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="/majors/remove/{{id}}"><i class="bi bi-trash"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{#each majors}}
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Atenção</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Tem certeza que você quer deletar {{name}}?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger">Deletar <a href="/majors/remove/{{id}}"></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
