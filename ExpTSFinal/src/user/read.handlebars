@@ -1,0 +1,19 @@
+<h2>Dados do Usuário</h2>
+<hr>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{user.fullname}}</h5 <p class="card-text mt-3">
+        <strong>Email:</strong><br>
+        {{user.email}}
+        </p>
+
+        <p class="card-text">
+            <strong>Curso:</strong><br>
+            {{user.major.name}}
+        </p>
+
+        <a href="/users" class="btn btn-secondary mt-3">Voltar para a Lista</a>
+        <a href="/users/update/{{user.id}}" class="btn btn-primary mt-3">Editar</a>
+    </div>
+</div>
