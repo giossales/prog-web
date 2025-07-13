@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-between align-items-start">
+    <h2>Listagem de cursos</h2>
+    <h4><a href="/majors/create"><i class="bi bi-plus-square"></i></a></h4>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome</th>
+            <th class="text-end">Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each majors}}
+        <tr>
+            <td>{{code}}</td>
+            <td>{{name}}</td>
+            <td class="text-end">
+                <a href="/majors/read/{{id}}"><i class="bi bi-eye"></i></a>
+                <a href="/majors/update/{{id}}"><i class="bi bi-pencil"></i></a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" data-id="{{id}}"
+                    data-name="{{name}}">
+                    <i class="bi bi-trash"></i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalLabel">Atenção</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Deletar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/removeMajor.js"></script>
